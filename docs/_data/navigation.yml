@@ -1,0 +1,28 @@
+---
+main:
+  - title: "Home"
+    url: /
+  - title: "Working Groups"
+    url: /working-groups/
+    children:
+      - title: "Data Collection Pipeline"
+        url: /working-groups/data-collection/
+      - title: "Embodied Agentic AI"
+        url: /working-groups/embodied-agentic-ai/
+      - title: "Reference Platform & Applications"
+        url: /working-groups/reference-platform/
+      - title: "Standardized Interfaces & Messages"
+        url: /working-groups/standardized-interfaces/
+      - title: "Training & Execution Pipeline"
+        url: /working-groups/training-execution/
+  - title: "How to Contribute"
+    url: /contribute/
+  - title: "For Organizations"
+    url: /partnerships/
+  - title: "About"
+    url: /about/
+    children:
+      - title: "SIG Charter"
+        url: /about/charter/
+      - title: "SIG Expectations"
+        url: /about/expectations/
