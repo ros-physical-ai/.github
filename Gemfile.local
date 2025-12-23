@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+# Local development Gemfile (without github-pages to avoid API issues)
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "minimal-mistakes-jekyll"  # Theme for rendering

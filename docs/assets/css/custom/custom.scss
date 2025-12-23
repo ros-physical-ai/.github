@@ -1,0 +1,54 @@
+// Custom fonts for Physical AI SIG
+// Note: Font is loaded via _includes/head/custom.html
+// Using Inter for everything - override minimal-mistakes defaults
+
+// Apply Inter font to body and all text elements
+body,
+.page,
+.page__content,
+.page__meta,
+.page__title,
+.entry,
+.entry__content,
+p,
+li,
+td,
+th,
+dd,
+dt {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings use Inter with different weights
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.entry__title,
+.archive__item-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+// Navigation
+.nav__list,
+.nav__items,
+.masthead__menu-item,
+.masthead__menu-item a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 500;
+}
+
+// Sidebar
+.sidebar,
+.sidebar__right,
+.sidebar__right .nav__list {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+// Code blocks keep monospace
+code, pre, .highlight {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
