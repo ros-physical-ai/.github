@@ -10,9 +10,7 @@ permalink: /working-groups/data-collection/
 
 ## Overview
 
-This group builds the workflow of collecting data, logging under
-constraints (poor network conditions, etc.), and inspecting and
-visualizing logged data for curation.
+This group builds the workflow of collecting data, logging under constraints (poor network conditions, etc.), and inspecting and visualizing logged data for curation.
 
 ## Scope
 
@@ -28,9 +26,7 @@ Export and convert to relevant data formats (e.g. rosbag2 → lerobot).
 
 ### Teleoperation
 
-Support for standard teleoperation devices, standard interfaces for joint
-and Cartesian jogging. Includes basic tools for retargeting with devices
-like MOCAP4ROS2, HTC Vive, and Meta Quest.
+Support for standard teleoperation devices, standard interfaces for joint and Cartesian jogging. Includes basic tools for retargeting with devices like MOCAP4ROS2, HTC Vive, and Meta Quest.
 
 ### Annotation
 

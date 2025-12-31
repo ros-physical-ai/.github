@@ -10,28 +10,21 @@ permalink: /working-groups/training-execution/
 
 ## Overview
 
-This group builds the end-to-end software workflow, enabling developers to
-take a trained policy and run it efficiently and robustly on a robot.
+This group builds the end-to-end software workflow, enabling developers to take a trained policy and run it efficiently and robustly on a robot.
 
 ## Scope
 
 ### End-to-End Policy Deployment
 
-Create a seamless flow to convert trained policies into performant ROS
-graphs, including critical steps like real-time data synchronization for
-inference.
+Create a seamless flow to convert trained policies into performant ROS graphs, including critical steps like real-time data synchronization for inference.
 
 ### Real-Time Execution & Performance
 
-Develop and standardize core components, such as real-time capable
-executors, to ensure that deployed policies can meet strict performance
-guarantees.
+Develop and standardize core components, such as real-time capable executors, to ensure that deployed policies can meet strict performance guarantees.
 
 ### Pipeline Tooling & Expansion
 
-Improve the developer experience with simplified installation and testing
-tools while extending the pipeline to support advanced paradigms like
-Reinforcement Learning.
+Improve the developer experience with simplified installation and testing tools while extending the pipeline to support advanced paradigms like Reinforcement Learning.
 
 ## Roadmap
 

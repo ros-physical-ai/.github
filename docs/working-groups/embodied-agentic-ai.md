@@ -10,32 +10,21 @@ permalink: /working-groups/embodied-agentic-ai/
 
 ## Overview
 
-Develop standards, best practices and reference applications for flexible
-skill composition, where reasoning models (LLMs, VLMs) orchestrate state
-of the art (e.g. navigation, manipulation packages) and learned policies
-through tool use. This is a meta-approach in that it incorporates other
-methods, triggers skills in the right context, expands upon existing robot
-stacks, and can serve as a framework for supervised learning.
+Develop standards, best practices and reference applications for flexible skill composition, where reasoning models (LLMs, VLMs) orchestrate state of the art (e.g. navigation, manipulation packages) and learned policies through tool use. This is a meta-approach in that it incorporates other methods, triggers skills in the right context, expands upon existing robot stacks, and can serve as a framework for supervised learning.
 
 ## Scope
 
 ### Connect to Embodied AI Community
 
-Connect to the [Embodied AI Community Group](https://github.com/ros-wg-embodied-ai)
-and associated initiatives such as
-[awesome-embodied-ai-ros](https://github.com/ros-wg-embodied-ai/awesome-embodied-ai-ros).
-The group would welcome presentations about new SIG initiatives.
+Connect to the [Embodied AI Community Group](https://github.com/ros-wg-embodied-ai) and associated initiatives such as [awesome-embodied-ai-ros](https://github.com/ros-wg-embodied-ai/awesome-embodied-ai-ros). The group would welcome presentations about new SIG initiatives.
 
 ### Open-Source Framework Collaboration
 
-Inform, evaluate, use or contribute to open-source embodied AI frameworks
-such as [RAI](https://github.com/RobotecAI/rai) or
-[ROSA](https://github.com/nasa-jpl/rosa).
+Inform, evaluate, use or contribute to open-source embodied AI frameworks such as [RAI](https://github.com/RobotecAI/rai) or [ROSA](https://github.com/nasa-jpl/rosa).
 
 ### Foundation Model Fine-Tuning
 
-Advance fine-tuning of compact foundation models for embodiment and
-specific robotic domains.
+Advance fine-tuning of compact foundation models for embodiment and specific robotic domains.
 
 ### On-Board Deployment
 

@@ -1,12 +1,10 @@
 # Physical AI SIG Organization Repository
 
-This repository contains the GitHub organization profile and documentation
-for the [OSRA TGC Special Interest Group for Physical AI](https://github.com/ros-physical-ai).
+This repository contains the GitHub organization profile and documentation for the [OSRA TGC Special Interest Group for Physical AI](https://github.com/ros-physical-ai).
 
 ## Contents
 
-- **Profile README** (`profile/README.md`) - Rendered on the GitHub
-  organization homepage
+- **Profile README** (`profile/README.md`) - Rendered on the GitHub organization homepage
 - **Documentation** (`docs/`) - Rendered via GitHub Pages
 
 ## Development
