@@ -1,0 +1,59 @@
+---
+# Jekyll configuration for GitHub Pages
+
+title: Physical AI SIG
+description: OSRA TGC Special Interest Group for Physical AI
+
+# Theme for rendering markdown to HTML
+theme: jekyll-theme-dinky
+
+# Site settings
+locale: "en-US"
+name: "Physical AI SIG"
+tagline: "OSRA TGC Special Interest Group for Physical AI"
+url: "https://ros-physical-ai.github.io"
+baseurl: ""
+
+# GitHub repository metadata (for jekyll-github-metadata plugin)
+repository: "ros-physical-ai/.github"
+
+
+# Site author
+author:
+  name: "Physical AI SIG"
+  avatar: "/assets/images/bio-photo.jpg"  # Optional
+  bio: "OSRA TGC Special Interest Group for Physical AI"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ros-physical-ai"
+
+# Site footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ros-physical-ai"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+# Sass configuration to suppress deprecation warnings from theme
+sass:
+  style: compressed
+  quiet_deps: true
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - .pre-commit-config.yaml
+  - BUILD.md
+  - README.md
+  - LICENSE

@@ -1,0 +1,129 @@
+// Custom styles for Physical AI SIG
+// Code blocks keep monospace
+code, pre, .highlight {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+// Sidebar navigation styles
+// Ensure navigation is separate from button list
+header .sidebar-nav {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  clear: both;
+}
+
+// Override theme's button styles for navigation list items
+header .sidebar-nav .nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// CRITICAL: Override the theme's header li button styles for navigation items
+header .sidebar-nav .nav-item {
+  list-style-type: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0.25em !important;
+  line-height: normal !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+header .sidebar-nav .nav-item:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+// Override any button styles from the theme
+// Be very specific to avoid button styling - the theme applies button styles to ALL header li elements
+header .sidebar-nav .nav-link,
+header .sidebar-nav .nav-child-link {
+  display: block;
+  padding: 0.4em 0.5em;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-size: 0.9em;
+  font-weight: normal !important;
+  text-align: left;
+  width: 100%;
+  box-shadow: none !important;
+  cursor: pointer;
+  text-shadow: none !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+  -webkit-font-smoothing: auto !important;
+}
+
+header .sidebar-nav .nav-link:hover,
+header .sidebar-nav .nav-child-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+header .sidebar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+header .sidebar-nav .nav-children {
+  list-style: none;
+  padding: 0;
+  margin: 0.25em 0 0.5em 1em;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 0.75em;
+}
+
+// Override button styles for child list items too
+header .sidebar-nav .nav-child-item {
+  list-style-type: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0.15em !important;
+  line-height: normal !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+header .sidebar-nav .nav-child-item:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+header .sidebar-nav .nav-child-link {
+  padding: 0.3em 0.5em;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.85em;
+}
+
+header .sidebar-nav .nav-child-link:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+}
+
+header .sidebar-nav .nav-child-link.active {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}

@@ -1,0 +1,29 @@
+{% if site.data.navigation.main %}
+<nav class="sidebar-nav">
+  <ul class="nav-list">
+    {% for item in site.data.navigation.main %}
+      {% assign item_url = item.url | relative_url %}
+      {% assign page_url = page.url | remove: 'index.html' %}
+      {% assign item_url_clean = item_url | remove: 'index.html' %}
+      <li class="nav-item">
+        <a href="{{ item_url }}" class="nav-link{% if page_url == item_url_clean or page_url == item_url_clean | append: '/' %} active{% endif %}">
+          {{ item.title }}
+        </a>
+        {% if item.children %}
+          <ul class="nav-children">
+            {% for child in item.children %}
+              {% assign child_url = child.url | relative_url %}
+              {% assign child_url_clean = child_url | remove: 'index.html' %}
+              <li class="nav-child-item">
+                <a href="{{ child_url }}" class="nav-child-link{% if page_url == child_url_clean or page_url == child_url_clean | append: '/' %} active{% endif %}">
+                  {{ child.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
