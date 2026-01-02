@@ -12,7 +12,7 @@ Ways to get involved with the Physical AI SIG.
 
 Explore working groups and roadmaps to find areas that match your interests and expertise.
 
-- [Working Groups](working-groups/) - Detailed scope and focus areas
+- [Working Groups](../working-groups/) - Detailed scope and focus areas
 
 ## Contribution Opportunities
 
