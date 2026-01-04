@@ -4,6 +4,78 @@
 @import "{{ site.theme }}";
 
 // Custom styles for Physical AI SIG
+
+// Use Helvetica for all fonts
+body, h1, h2, h3, h4, h5, h6, p, a, li, th, td, blockquote, pre, code {
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+// Make the main title in sidebar bold, italic, and Times New Roman
+h1.header {
+  font-weight: bold !important;
+  font-style: italic !important;
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+// Modern, readable font sizes
+body {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+h1 { font-size: 34px !important; }
+h2 { font-size: 26px !important; }
+h3 { font-size: 20px !important; }
+
+// Keep button text small to fit
+header li a.buttons {
+  font-size: 11px !important;
+}
+
+// Modern Japanese-inspired button colors
+header li {
+  background: #60AB31 !important;
+  background: linear-gradient(to bottom, #6bb83a 0%, #60AB31 100%) !important;
+  border-color: #4a8a26 !important;
+  box-shadow: inset 0px 1px 1px 0 #7bc845 !important;
+}
+
+header li:hover {
+  background: #6bb83a !important;
+  background: linear-gradient(to bottom, #7bc845 0%, #6bb83a 100%) !important;
+}
+
+header li a.buttons {
+  color: #fff !important;
+}
+
+// Fix sharp corners - consistent rounded corners across all elements
+header {
+  border-radius: 8px !important;
+}
+
+header li {
+  border-radius: 6px !important;
+}
+
+header .sidebar-nav .nav-link:hover,
+header .sidebar-nav .nav-child-link:hover,
+header .sidebar-nav .nav-link.active,
+header .sidebar-nav .nav-child-link.active {
+  border-radius: 4px !important;
+}
+
+pre, code {
+  border-radius: 6px !important;
+}
+
+// Smooth responsive transitions
+@media (max-width: 960px) {
+  header {
+    border-radius: 8px !important;
+  }
+}
+
 // Code blocks keep monospace
 code, pre, .highlight {
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
@@ -61,7 +133,7 @@ header .sidebar-nav .nav-child-link {
   border: none !important;
   border-radius: 0 !important;
   transition: color 0.2s ease, background-color 0.2s ease;
-  font-size: 0.9em;
+  font-size: 0.95em !important;
   font-weight: normal !important;
   text-align: left;
   width: 100%;
@@ -119,7 +191,7 @@ header .sidebar-nav .nav-child-item:hover {
 header .sidebar-nav .nav-child-link {
   padding: 0.3em 0.5em;
   color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 0.85em;
+  font-size: 0.9em !important;
 }
 
 header .sidebar-nav .nav-child-link:hover {
@@ -131,4 +203,76 @@ header .sidebar-nav .nav-child-link.active {
   background-color: rgba(255, 255, 255, 0.12) !important;
   color: #fff !important;
   font-weight: 500 !important;
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f0f0 !important;
+    border-bottom-color: #444 !important;
+  }
+
+  a {
+    color: #ff6b6b !important;
+  }
+
+  a:hover {
+    color: #ff8787 !important;
+  }
+
+  header {
+    background-color: #0d0d0d !important;
+    border-color: #333 !important;
+  }
+
+  section {
+    background-color: transparent;
+  }
+
+  pre {
+    background: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+  }
+
+  code {
+    background: #2d2d2d !important;
+    color: #e0e0e0 !important;
+  }
+
+  table {
+    border-color: #444 !important;
+  }
+
+  th {
+    background: #2d2d2d !important;
+    color: #f0f0f0 !important;
+  }
+
+  td {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+  }
+
+  hr {
+    background: #444 !important;
+  }
+
+  img {
+    border-color: #444 !important;
+    opacity: 0.9;
+  }
+
+  blockquote {
+    color: #b0b0b0 !important;
+  }
+
+  dl, dt, dd, dl p {
+    color: #c0c0c0 !important;
+  }
 }
