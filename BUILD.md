@@ -4,21 +4,21 @@
 
 ### Setup
 
-1. Install Ruby and Bundler (Ubuntu):
+- Install Ruby and Bundler (Ubuntu):
 
 ```bash
 sudo apt install ruby ruby-dev build-essential
 sudo gem install bundler
 ```
 
-1. Configure and install:
+- Configure and install:
 
 ```bash
 bundle config set --local path 'vendor/bundle'
 ./scripts/serve.sh
 ```
 
-1. View at `http://localhost:4000`
+- View at `http://localhost:4000`
 
 ## GitHub Pages
 
