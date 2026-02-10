@@ -2,7 +2,7 @@
 
 Last updated: February, 2026
 
-Authors: Julia Jia, Jennifer, Sai Kishor Kothakota
+Authors: Julia Jia, Jennifer Buehler, Sai Kishor Kothakota
 
 ## Overview
 
