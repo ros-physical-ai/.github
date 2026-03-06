@@ -2,11 +2,11 @@
 
 Last updated: February, 2026
 
-Authors: Julia Jia
+Authors: Julia Jia, Jennifer Buehler, Sai Kishor Kothakota
 
 ## Overview
 
-This proposal addresses the integration of AI/ML model inference with ros2_control to support robotics applications requiring policy-based control. The design synthesizes requirements from multiple organizations working on AI robotics integration.
+This proposal addresses the integration of AI/ML model inference with ros2_control to support robotics applications requiring policy-based control. The design synthesizes requirements from multiple organizations working on Physical AI robotics integration.
 
 ## Problem Statement
 
@@ -30,11 +30,11 @@ Priority is assigned based on two factors: (1) how commonly the feature is reque
 | Priority | Requirement | Description | ros2_control support | alternatives |
 |----------|-------------|-------------|----------------------|-------------|
 | 1 | Multi-rate support | 50-1000Hz control loop with 5-50Hz inference integration, automatic interpolation/upsampling | Built-in interpolation/upsampling in controllers for deterministic timing | Separate interpolation node publishing at control rate |
-| 1 | Observation aggregation | Multi-sensor time sync, configurable downsampling, state interface broadcaster | State interface broadcaster with time synchronization and downsampling capabilities | Separate synchronization nodes using message_filters |
+| 1 | Observation aggregation | Multi-sensor time sync, configurable downsampling, state broadcaster (inspired by, or using, [state_interfaces_broadcaster](https://github.com/ros-controls/ros2_controllers/tree/master/state_interfaces_broadcaster)) | State broadcaster with time synchronization and able to sync other sensor data like camera | Separate synchronization nodes using message_filters |
 | 1 | External inference support | ROS service interface, optional gRPC/HTTP adapters, timeout and error handling | Controller interfaces for calling external inference services with timeout/error handling | Custom ROS service clients in separate nodes |
-| 1 | Action post-processing | Denormalization utilities, safety constraints, chunk interpolation | Built-in utilities in controller framework for action transformation | Post-processing in separate nodes before controller input |
+| 1 | Action post-processing | Denormalization utilities, scaling, offset application, safety constraints | Built-in utilities in controller framework for action transformation | Post-processing in separate modules before forwarding commands to controller (or) pluginlib approach |
 | 1 | Debugging infrastructure | Observation injection, multi-stage debug publishing, validation tools | Built-in observation injection and debug topic publishing in controllers | External debugging tools and custom injection services |
-| 2 | Data collection mode | Episode management, standard formats (HDF5, rosbag), metadata capture | First-class data collection mode with episode management and standard formats | External data collection tools and custom logging nodes |
+| 2 | Data collection mode | Episode management, standard formats (rosetta, HDF5, rosbag), metadata capture | First-class data collection mode with episode management and standard formats | External data collection tools and custom logging nodes |
 | 2 | Tensor datatypes | Optional tensor support in state/command interfaces, framework-agnostic representation | Tensor state/command interfaces with framework-agnostic representation | Custom message types and conversion utilities |
 | 2 | Advanced controllers | Cartesian space control, impedance control, chunk-aware controllers | Controllers for cartesian space, impedance control, and chunk-aware execution | Custom controller implementations |
 
@@ -97,7 +97,6 @@ The proposed architecture focuses on extending ros2_control to support model inf
 │  ┌──────────────────────────────────────────────────┐   │
 │  │  Controllers with Inference Support              │   │
 │  │  - Multi-rate interpolation/upsampling           │   │
-│  │  - External inference service calls              │   │
 │  │  - Action post-processing (denormalization, etc) │   │
 │  │  - In-controller inference (ONNX)                │   │
 │  └──────────────────────────────────────────────────┘   │
@@ -106,11 +105,6 @@ The proposed architecture focuses on extending ros2_control to support model inf
 │  │  - Multi-sensor time synchronization             │   │
 │  │  - Configurable downsampling                     │   │
 │  │  - Observation aggregation                       │   │
-│  └──────────────────────────────────────────────────┘   │
-│  ┌──────────────────────────────────────────────────┐   │
-│  │  Enhanced State/Command Interfaces               │   │
-│  │  - Tensor datatypes                              │   │
-│  │  - Image, force/torque support                   │   │
 │  └──────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
                           ↓
@@ -132,7 +126,7 @@ The proposed architecture focuses on extending ros2_control to support model inf
 | **Company_R** | Software structure | High-level base classes (ObservationBase, InferenceBase, ActionBase); no direct ros2_control requirement, can be separate packages | Not specified | Not specified |
 | **Company_O** | Practical deployment | End-to-end ONNX pipeline in controller (observation formatting → ONNX inference → action post-processing) | 50Hz | Policy-dependent |
 
-## Feature List (tentative, pending on review)
+## Feature List (tentative)
 
 This section lists the proposed features organized by priority. Priority 1 features are the most commonly requested and difficult to implement without ros2_control expertise. Priority 2 features are either less common or can be reasonably implemented as alternative solutions.
 
