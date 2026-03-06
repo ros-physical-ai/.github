@@ -65,12 +65,22 @@ The proposed architecture supports two distinct modes for integrating policy inf
 #### Mode 2: External Inference Node + Controller
 
 - Policy inference runs in a separate node/process
-- Controller calls external inference via ROS service, gRPC, or HTTP
+- Controller receives inference actions via ROS topics, ROS service, gRPC, or HTTP
+- Inference node is responsible for gathering its own observations (e.g. subscribing to various topics and processing them)
 - Suitable for large models (e.g., VLAs, vision-language models)
-- Flexible deployment, can run on different hardware
+- Flexible deployment — inference can run on different hardware
 - Controller handles multi-rate interpolation/upsampling of actions
 
-Both modes are desirable, allowing users to choose based on their model size, latency requirements, and deployment constraints.
+#### Mode 3: Mode 2 + Observation Preprocessing in ros2_control
+
+Everything in Mode 2, plus:
+
+- A ros2_control plugin pre-processes and reformats state interface data (e.g. joint states, sensor readings) into observation topics consumed by the inference node
+- The inference node no longer needs to gather or reformat raw observations itself
+
+This is useful when observation formatting depends on ros2_control-internal data (state interfaces) that is not otherwise published, or when consistent preprocessing (normalization, downsampling, synchronization) should be handled closer to the control loop.
+
+The intention of these modes is to let users choose based on model size, latency requirements, and deployment constraints.
 
 ### ros2_control Components
 
