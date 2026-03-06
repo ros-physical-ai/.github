@@ -11,7 +11,7 @@ theme: jekyll-theme-dinky
 locale: "en-US"
 name: "Physical AI SIG"
 tagline: "OSRA TGC Special Interest Group for Physical AI"
-url: "https://ros-physical-ai.github.io"
+url: "https://physical-ai.ros.org"
 baseurl: ""
 
 # GitHub repository metadata (for jekyll-github-metadata plugin)
@@ -33,7 +33,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/ros-physical-ai"
+      url: "https://physical-ai.ros.org"
 
 # GitHub Pages settings
 plugins:

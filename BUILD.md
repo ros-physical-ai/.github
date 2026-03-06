@@ -25,7 +25,7 @@ bundle config set --local path 'vendor/bundle'
 Automatically deployed when content is pushed:
 
 - Profile: `https://github.com/ros-physical-ai`
-- Docs: `https://ros-physical-ai.github.io`
+- Docs: `https://physical-ai.ros.org`
 
 ## Pre-commit
 
