@@ -81,6 +81,33 @@ code, pre, .highlight {
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
 }
 
+// Fix header overflow issue - make it scrollable
+header {
+  overflow-y: auto !important;
+  max-height: 100vh !important;
+}
+
+// Hide the footer to prevent overlap with sidebar
+footer {
+  display: none !important;
+}
+
+// Increase sidebar width for better readability
+header {
+  width: 240px !important;
+  padding: 25px 25px !important;
+}
+
+// Override theme's float: right layout to properly clear the fixed sidebar
+// Original section width: 650px in 960px wrapper = starts at 310px from wrapper left.
+// Our header is now 240px + 50px padding = ~290px wide, so section must start at >=300px.
+// Reduce section width slightly and keep float:right so it positions correctly.
+section {
+  float: right !important;
+  width: 620px !important;
+  margin-left: 0 !important;
+}
+
 // Sidebar navigation styles
 // Ensure navigation is separate from button list
 header .sidebar-nav {
