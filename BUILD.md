@@ -32,7 +32,7 @@ This is an optional approach that provides a fully reproducible build environmen
 2. When prompted, click **Reopen in Container** — or run the command
    `Dev Containers: Reopen in Container` from the Command Palette (`Ctrl+Shift+P`).
 3. VS Code builds the Docker image (first time only) and opens the workspace inside
-   the container. Bundle dependencies are installed automatically via `postCreateCommand`.
+   the container. Bundle dependencies are installed automatically.
 4. Start the local documentation server:
 
    ```bash
