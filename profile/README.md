@@ -61,4 +61,3 @@ We ask that participants commit to making regular open-source contributions to i
 
 - [Partnership Opportunities](https://physical-ai.ros.org/partnerships) - Learn about organizational participation
 - [SIG Charter](https://physical-ai.ros.org/about/charter) - Review official charter
-- [Member Registry](https://physical-ai.ros.org/community/members) - See who's involved
