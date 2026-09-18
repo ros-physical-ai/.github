@@ -34,7 +34,7 @@ We're organized into five working groups, each focused on a critical layer of th
 | **[Standardized Interfaces & Messages](https://physical-ai.ros.org/working-groups/standardized-interfaces)** | Common language and contracts for ecosystem interoperability | Michel Hidalgo (Ekumen) |
 | **[Data Collection Pipeline](https://physical-ai.ros.org/working-groups/data-collection)** | Tools and workflows for data collection, logging, and curation | Anh Vu Vu (Huawei) |
 | **[Training & Execution Pipeline](https://physical-ai.ros.org/working-groups/training-execution)** | End-to-end software workflow for policy deployment | Michael Gentner (BMW) |
-| **[Reference Platform & Applications](https://physical-ai.ros.org/working-groups/reference-platform)** | T(AI)rtle Bot 5 platform and showcase applications | Yadunund Vijay (Intrinsic) |
+| **[Reference Platform & Applications](https://physical-ai.ros.org/working-groups/reference-platform)** | Integrated reference stack and showcase applications on real hardware | Franco Cipollone (Ekumen) |
 | **[Embodied Agentic AI](https://physical-ai.ros.org/working-groups/embodied-agentic-ai)** | Standards for flexible skill composition with reasoning models | Adam Dabrowski (Robotec.ai) |
 
 ## Community & Contributing
