@@ -28,7 +28,7 @@ Builds the end-to-end software workflow, enabling developers to take a trained p
 
 ## [Reference Platform & Applications](reference-platform)
 
-**Coordinator:** Yadunund Vijay (Intrinsic)
+**Coordinator:** Franco Cipollone (Ekumen)
 
 Makes the initiative's work tangible by integrating all technologies into a physical platform with accessible examples and community-facing activities.
 
